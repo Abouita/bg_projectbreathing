@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using System.Collections;
+using System;
 
 /// <summary>
 /// This compontent controls the flow of the wizard
@@ -51,6 +51,7 @@ public class DialogWizard : MonoBehaviour
     void finishWizard ()
     {
         Debug.Log("Finish Wizard clicked");
+        PlayerPrefs.SetFloat("FilledOutPreform", DateTime.Now.Ticks);
         SceneManager.LoadScene("LungScene", LoadSceneMode.Single);
     }
 }
