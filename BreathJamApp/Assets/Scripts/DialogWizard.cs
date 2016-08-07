@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
@@ -50,5 +51,6 @@ public class DialogWizard : MonoBehaviour
     void finishWizard ()
     {
         Debug.Log("Finish Wizard clicked");
+        SceneManager.LoadScene("LungScene", LoadSceneMode.Single);
     }
 }
